@@ -1,20 +1,132 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>RAZZLETAZZ.com - Fun games for girls!</title>
 	<style>
 		.sampleMarquee {
 			color: #ff00ff;
 			background-color: #0000ff;
-			font-size: 34px;
-			line-height: 70px;
+			font-size: 20px;
 			padding: 15px;
 			font-weight: bold;
 		}
+
+		.overlay {
+			border-radius: 10px;
+			margin: 20px auto;
+			background-color: rgba(0, 0, 0, 0.6);
+			padding: 20px;
+			max-width: 1250px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		h1 {
+			font-family: "Arial";
+			color: white;
+			font-size: 50px;
+			text-shadow: 0px 2px 3px rgba(0, 0, 0, 1);
+		}
+
+		h2,
+		h3 {
+			font-family: "Arial";
+			color: white;
+			text-shadow: 0px 2px 3px rgba(0, 0, 0, 1);
+		}
+
+		p {
+			font-size: 25px;
+			font-family: "Arial";
+			color: white;
+			text-shadow: 0px 2px 3px rgba(0, 0, 0, 1);
+		}
+
+		.notice {
+			font-size: 15px;
+			font-family: "Arial";
+			color: white;
+			text-shadow: 0px 2px 3px rgba(0, 0, 0, 1);
+		}
+
+		#square {
+			background-color: #000000;
+			width: 970px;
+			height: 580px;
+			margin-right: auto;
+			margin-left: auto;
+			text-align: center;
+			position: relative;
+		}
+
+		a:link {
+			color: rgb(21, 95, 255);
+			text-decoration: none;
+		}
+
+		a:visited {
+			color: rgb(98, 232, 255);
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: rgb(0, 195, 255);
+			text-decoration: underline;
+		}
+
+		.hover:hover {
+			cursor: pointer;
+		}
 	</style>
 </head>
-<body>
-	<marquee class="sampleMarquee" direction="left" scrollamount="30" behavior="scroll">FOR ANY INQUIRY: contact[at]fryingpain[dot]com</marquee>
-  <h1>Placing Holders</h1>
+
+<body background="assets/dirt.png">
+	<marquee class="sampleMarquee" direction="left" scrollamount="30" behavior="scroll">RAZZLETAZZ.com - Fun games for
+		girls! | FOR ANY INQUIRY (such as fan mail, hate mail for hating lumity (you suck if you do)
+		or domain ownership): contact[at]fryingpain[dot]com</marquee>
+	<div class="overlay">
+		<h1>RAZZLE...tazz?</h1>
+		<img src="assets/vass.gif" class="hover" onclick="squeak()">
+		<p>Hello, we're two <b>AroAce</b> individuals who do nothing but stare at our terminals and do neofetch all day
+			(and hate on Lumity because it's a rushed cashgrab).</p>
+		<p>A few days ago we found out about the Razzletazz flash game ARG, it's not popular, but it's growing.<br>We
+			know that eventually, the ARG will soon be popular enough and people with bad intentions will take adventage
+			of it and domain squat <b>razzletazz.com</b></p>
+		<p>So we decided to purchase razzletazz.com before anybody with bad intentions does.<br>We are willing to give
+			the domain away to the owner of the ARG for free if they ask for it (with proof ofc). Requirements: GoDaddy
+			account... and head pats :3<br>Any donation for holding the website is greatly appreciated...</p>
+		<p>So while we wait, we had a bit of fun coding stuff for this site...<br>Pick a door! C'mon!</p>
+		<div class="square">
+			<img src="assets/door.png" id="door1" class="hover" style="width: 15%;" onclick="dinosaur()">
+			<img src="assets/door.png" id="door2" class="hover" style="width: 15%;">
+			<a href="continuation.html"><img src="assets/door.png" id="door3" class="hover" style="width: 15%;"></a>
+			<img src="assets/dinosaur.jpg" id="dinosaur" style="width: 75%; display: none;">
+		</div>
+		<p class="notice">Website owned by <a href="https://www.fryingpain.com/">FryingPain</a> and <a
+				href="https://www.youtube.com/@IOrbitSaturn">IOrbitSaturn</a>. Go to <a
+				href="https://github.com/IFrySaturn">IFrySaturn Github</a> for absolutely nothing, because this is our
+			only project so far.</p>
+	</div>
+	<script>
+		function dinosaur() {
+			document.getElementById('door1').style.display = "none";
+			document.getElementById('door2').style.display = "none";
+			document.getElementById('door3').style.display = "none";
+			document.getElementById('dinosaur').style.display = "";
+			var audio = new Audio('assets/dinosaur.mp3');
+			audio.play();
+			setTimeout(() => {
+				window.location.href = "https://kde.org";
+			}, 3500);
+		}
+		function squeak() {
+			var audio = new Audio('assets/squeak.mp3');
+			audio.play();
+		}
+	</script>
 </body>
+
 </html>
