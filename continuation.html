@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doors doors doors doors!</title>
-    <link href="./assets/cursor.css" type="text/css" rel="stylesheet">
     <link href="./assets/main.css" type="text/css" rel="stylesheet">
     <style>
         #l {
@@ -25,14 +23,15 @@
 </head>
 
 <body>
+    <img id="Oilrose" src="assets/Oilrose.webp" alt="Oilrose" style="display: none;">
     <div id="square">
         <img src="./assets/lumity2.png" id="l">
         <img src="./assets/lumity2.png" id="r">
         <h1>Oh, how exciting!</h1><br />
         <p>More doors! You know what to do.</p>
         <a href="https://www.roblox.com/games/6456351776/Kaiju-Paradise"><img src="assets/door.png" id="door1" class="hover" style="width: 15%;" onclick="removeDoors()"></a>
-		<img src="assets/door.png" id="door2" class="hover" style="width: 15%;">
-	    <img src="assets/door.png" id="door3" class="hover" style="width: 15%;">
+		<img src="assets/door.png" id="door2" class="hover" style="width: 15%;" onclick="Oilrose()">
+	    <a href="Lumity.html"><img src="assets/door.png" id="door3" class="hover" style="width: 15%;" onclick="removeDoors()"></a>
         <img src="assets/door.png" id="door4" class="hover" style="width: 15%;">
     </div>
     <script>
@@ -41,6 +40,11 @@
 			document.getElementById('door2').style.display = "none";
 			document.getElementById('door3').style.display = "none";
             document.getElementById('door4').style.display = "none";
+        }
+        function Oilrose() {
+			document.getElementById('square').style.display = "none";
+            document.getElementById('Oilrose').style.display = "block";
+            document.title = "Oilrose";
         }
 	</script>
 </body>

@@ -36,3 +36,7 @@ a:hover {
   text-align: center;
   position: relative;
 }
+
+.hover:hover {
+  cursor: pointer;
+}
