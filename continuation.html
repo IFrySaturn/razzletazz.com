@@ -24,15 +24,16 @@
 
 <body>
     <img id="Oilrose" src="assets/Oilrose.webp" alt="Oilrose" style="display: none;">
+    <video id="K" src="assets/S10000-0120.mp4" style="display: none;"></video>
     <div id="square">
         <img src="./assets/lumity2.png" id="l">
         <img src="./assets/lumity2.png" id="r">
         <h1>Oh, how exciting!</h1><br />
         <p>More doors! You know what to do.</p>
-        <a href="https://www.roblox.com/games/6456351776/Kaiju-Paradise"><img src="assets/door.png" id="door1" class="hover" style="width: 15%;" onclick="removeDoors()"></a>
+        <a href="DamnedHallways/"><img src="assets/door.png" id="door1" class="hover" style="width: 15%;" onclick="removeDoors()"></a>
 		<img src="assets/door.png" id="door2" class="hover" style="width: 15%;" onclick="Oilrose()">
 	    <a href="Lumity.html"><img src="assets/door.png" id="door3" class="hover" style="width: 15%;" onclick="removeDoors()"></a>
-        <img src="assets/door.png" id="door4" class="hover" style="width: 15%;">
+        <img src="assets/door.png" id="door4" class="hover" style="width: 15%;" onclick="K()">
     </div>
     <script>
 		function removeDoors() {
@@ -45,6 +46,14 @@
 			document.getElementById('square').style.display = "none";
             document.getElementById('Oilrose').style.display = "block";
             document.title = "Oilrose";
+        }
+        function K() {
+			document.getElementById('square').style.display = "none";
+            document.getElementById('K').style.display = "block";
+            document.getElementById('K').play();
+            setTimeout(() => {
+				window.location.reload();
+			}, 5000);
         }
 	</script>
 </body>
